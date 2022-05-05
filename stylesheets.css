@@ -1,0 +1,151 @@
+* {
+  font-family: "Inconsolata", monospace;
+  scroll-behavior: smooth;
+}
+
+#home {
+  background-image: url(./images/landingimg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#about {
+  width: 100%;
+  height: 80vh;
+  background: 
+    /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(187, 166, 166, 0.45),
+      rgba(81, 68, 68, 0.45)
+    ),
+    /* bottom, image */ url(./images/restaurant.jpg);
+  background-attachment: fixed;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #fd0d0d;
+}
+.nav button {
+  color: black;
+  background-color: #cda45e;
+}
+.nav button:hover {
+  background-color: #cda45e;
+  color: black;
+}
+.intro {
+  margin-right: 60%;
+}
+
+.intro span {
+  color: #cda45e;
+}
+#whyus {
+  width: 100%;
+}
+
+#specials {
+  height: 50vh;
+  border-right: #cda45e;
+}
+#testimonials .card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid lightslategray;
+}
+/* GRID STYLING HERE */
+body {
+  display: grid;
+  grid-template-areas:
+    "home home home"
+    "about about about"
+    "whyus whyus whyus"
+    "menu menu menu"
+    "specials specials specials"
+    "events events events"
+    "bookings bookings bookings"
+    "testimonials testimonials testimonials"
+    "chefs chefs chefs"
+    "gallery gallery gallery"
+    "contact contact contact";
+}
+
+#home {
+  grid-area: home;
+}
+#about {
+  grid-area: about;
+}
+#whyus {
+  grid-area: whyus;
+}
+#menu {
+  grid-area: menu;
+}
+#specials {
+  grid-area: specials;
+}
+#events {
+  grid-area: events;
+}
+#bookings {
+  grid-area: bookings;
+}
+#testimonials {
+  grid-area: testimonials;
+}
+#chefs {
+  grid-area: chefs;
+}
+#gallery {
+  grid-area: gallery;
+}
+#contact {
+  grid-area: contact;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    grid-template-areas:
+      "home"
+      "about"
+      "whyus"
+      "menu"
+      "specials"
+      "events"
+      "bookings"
+      "testimonials"
+      "chefs"
+      "gallery"
+      "contact";
+  }
+  #about img {
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "home"
+      "about"
+      "whyus"
+      "menu"
+      "specials"
+      "events"
+      "bookings"
+      "testimonials"
+      "chefs"
+      "gallery"
+      "contact";
+  }
+  #about img {
+    max-height: 290px;
+    margin-bottom: 50px;
+  }
+}
