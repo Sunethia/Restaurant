@@ -45,18 +45,43 @@
   color: #cda45e;
 }
 #whyus {
+  background-color: black;
+  color: white;
   width: 100%;
+}
+#menu {
+  background-image: url(./images/food.jpg);
+  color: white;
 }
 
 #specials {
   height: 50vh;
   border-right: #cda45e;
+  background-color: rgb(126, 114, 114);
+  color: white;
 }
 #testimonials .card img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  background-color: black;
+
   border: 5px solid lightslategray;
+}
+#events {
+  min-height: 80vh;
+  padding-top: 50px;
+  background-color: black;
+  color: white;
+}
+#bookings {
+  padding-top: 10px;
+  min-height: 80vh;
+}
+#testimonials {
+  background-color: grey;
+  color: black;
+  min-height: 70vh;
 }
 /* GRID STYLING HERE */
 body {
@@ -148,4 +173,49 @@ body {
     max-height: 290px;
     margin-bottom: 50px;
   }
+}
+#Gallery .container {
+  border: 10px solid #cda45e;
+  border-radius: 20px;
+}
+/* Chefs */
+#Chefs .container {
+  border: 10px solid #cda45e;
+  border-radius: 20px;
+}
+.chefs {
+  position: relative;
+}
+.chef-details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.chefs:hover .chef-details {
+  opacity: 1;
+}
+#Contact .container {
+  border: 10px solid #cda45e;
+  border-radius: 20px;
+}
+#contact button {
+  background-color: #ffd58d;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
